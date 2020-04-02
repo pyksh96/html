@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css"> 
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<title>Tutorial Page</title>
+
+<body>
+    <h1>HI!</h1>
+<canvas id = "canvas" width = "400" height = "300">
+</canvas>
+
+<script>
+// 전역변수 지정 //
+var c = document.getElementById('canvas');
+var ctx = c.getContext('2d');
+
+// 네모 //
+ctx.lineWidth = 5;
+ctx.strokeStyle = "rgb(255, 0, 0)";
+ctx.strokeRect(20, 20, 50, 50,);
+ctx.fillStyle = "rgb(0, 0, 255)";
+ctx.fillRect(20, 20, 50, 50,);
+
+// 호 //
+ctx.beginPath();
+ctx.strokeStyle = "rgb(255, 0, 0)";
+ctx.arc(300, 20, 25, 0, Math.PI, false);
+ctx.fillStyle = "rgb(0, 255, 255)";
+ctx.closePath();
+ctx.fill();
+ctx.lineWidth = 5;
+ctx.stroke();
+
+// 지우개 //
+ctx.clearRect(120, 20, 10 ,10);
+</script>
+
+<form name="f">
+판 : <input name = "stage" value = "첫 번째 던지기"/></br>
+포인트 : <input name = "pv" value = "   "/></br>
+결과 : <input name = "outcome" value = "   "/></br>
+<input type = "submit" value = "주사위 던지기"/>
+</form>
+
+</body>
+</html>
+
